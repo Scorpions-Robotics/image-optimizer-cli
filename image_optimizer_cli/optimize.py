@@ -30,7 +30,7 @@ def main():
 
     if os.path.isfile(args.path):
         img = Image.open(args.path)
-        img.save(args.output + "/" + os.path.basename(args.path), quality=args.quality)
+        img.save(f'{args.output}/' + os.path.basename(args.path), quality=args.quality)
 
     elif os.path.isdir(args.path):
         if not args.number:
